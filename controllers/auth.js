@@ -3,10 +3,6 @@ const Users = require("../models/userModel");
 // Register controller
 const register = async (req, res, next) => {
   const { firstName, lastName, email, password } = req.body;
-  console.log(email);
-  console.log(password);
-  console.log(firstName);
-  console.log(lastName);
 
   // Validate fields
   if (!firstName) {
