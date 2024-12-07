@@ -30,6 +30,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(morgan("dev"));
 
 app.use(router);
+app.use("/", (req, res) => {
+  res.send("Server is running");
+});
+app.listen(5000, console.log("Server started on PORT 5000"));
 
 // Error middleware
 app.use(errorMiddleware);
