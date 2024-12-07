@@ -75,7 +75,6 @@ exports.createJob = async (req, res, next) => {
       job,
     });
   } catch (error) {
-    console.log(error);
     res.status(404).json({ message: error.message });
   }
 };
@@ -133,7 +132,6 @@ exports.updateJob = async (req, res, next) => {
       jobPost,
     });
   } catch (error) {
-    console.log(error);
     res.status(404).json({ message: error.message });
   }
 };
@@ -201,7 +199,6 @@ exports.getJobPosts = async (req, res, next) => {
       numOfPage,
     });
   } catch (error) {
-    console.log(error);
     res.status(404).json({ message: error.message });
   }
 };
@@ -247,7 +244,6 @@ exports.getJobById = async (req, res, next) => {
       similarJobs,
     });
   } catch (error) {
-    console.log(error);
     res.status(404).json({ message: error.message });
   }
 };
@@ -264,7 +260,6 @@ exports.deleteJobPost = async (req, res, next) => {
       message: "Job Post Deleted Successfully.",
     });
   } catch (error) {
-    console.log(error);
     res.status(404).json({ message: error.message });
   }
 };

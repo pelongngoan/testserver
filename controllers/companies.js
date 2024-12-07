@@ -39,7 +39,6 @@ const register = async (req, res, next) => {
       token,
     });
   } catch (error) {
-    console.error(error);
     res.status(404).json({ message: error.message });
   }
 };
@@ -69,7 +68,6 @@ const signIn = async (req, res, next) => {
       token,
     });
   } catch (error) {
-    console.error(error);
     res.status(404).json({ message: error.message });
   }
 };
@@ -114,7 +112,6 @@ const updateCompanyProfile = async (req, res, next) => {
       token,
     });
   } catch (error) {
-    console.error(error);
     res.status(404).json({ message: error.message });
   }
 };
@@ -132,7 +129,6 @@ const getCompanyProfile = async (req, res, next) => {
     company.password = "";
     res.status(200).json({ success: true, data: company });
   } catch (error) {
-    console.error(error);
     res.status(404).json({ message: error.message });
   }
 };
@@ -166,17 +162,14 @@ const getCompanies = async (req, res, next) => {
 
     const companies = await queryResult;
 
-    res
-      .status(200)
-      .json({
-        success: true,
-        total,
-        data: companies,
-        page,
-        numOfPage: Math.ceil(total / limit),
-      });
+    res.status(200).json({
+      success: true,
+      total,
+      data: companies,
+      page,
+      numOfPage: Math.ceil(total / limit),
+    });
   } catch (error) {
-    console.error(error);
     res.status(404).json({ message: error.message });
   }
 };
@@ -203,7 +196,6 @@ const getCompanyJobListing = async (req, res, next) => {
 
     res.status(200).json({ success: true, companies: company });
   } catch (error) {
-    console.error(error);
     res.status(404).json({ message: error.message });
   }
 };
@@ -224,7 +216,6 @@ const getCompanyById = async (req, res, next) => {
     company.password = "";
     res.status(200).json({ success: true, data: company });
   } catch (error) {
-    console.error(error);
     res.status(404).json({ message: error.message });
   }
 };

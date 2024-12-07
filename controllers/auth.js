@@ -53,7 +53,6 @@ const register = async (req, res, next) => {
       token,
     });
   } catch (error) {
-    console.log(error);
     res.status(404).json({ message: error.message });
   }
 };
@@ -96,7 +95,6 @@ const signIn = async (req, res, next) => {
       token,
     });
   } catch (error) {
-    console.log(error);
     res.status(404).json({ message: error.message });
   }
 };

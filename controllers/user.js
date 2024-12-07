@@ -43,7 +43,6 @@ const updateUser = async (req, res, next) => {
       token,
     });
   } catch (error) {
-    console.log(error);
     res.status(404).json({ message: error.message });
   }
 };
@@ -75,7 +74,6 @@ const getUser = async (req, res, next) => {
       user: user,
     });
   } catch (error) {
-    console.log(error);
     res.status(500).json({
       message: "auth error",
       success: false,
