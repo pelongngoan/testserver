@@ -14,7 +14,7 @@
     }
   ],
   "functions": {
-    "api/**/*.js": {
+    "*.js": {
       "maxDuration": 30
     }
   }
